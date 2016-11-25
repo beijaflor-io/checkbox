@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 export default class Checkbox extends React.Component {
   static propTypes = {
+    id: React.PropTypes.string,
     name: React.PropTypes.string,
     prefixCls: React.PropTypes.string,
     style: React.PropTypes.object,
@@ -110,6 +111,7 @@ export default class Checkbox extends React.Component {
       >
           <span className={`${prefixCls}-inner`} />
           <input
+            id={props.id}
             name={props.name}
             type={props.type}
             readOnly={props.readOnly}
